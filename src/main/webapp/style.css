@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/* ドラクエ風背景とフォント */
+body {
+    font-family: 'DotGothic16', sans-serif;
+    background-color: #0078f0; /* ドラクエ風ブルー背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.center-box {
+    max-width: 400px;
+    margin: 100px auto; /* 上下中央に近く */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ウィンドウ（セリフ枠）風 */
+.dq-window {
+    background-color: #000;
+    color: white;
+    border: 4px solid white;
+    padding: 30px;
+    width: 500px;
+    box-shadow: 0 0 15px #ffffffcc;
+    text-align: left;
+}
+
+/* タイトル */
+.dq-title {
+    font-size: 24px;
+    color: #ffff88;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 説明テキスト */
+.dq-desc {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    white-space: pre-line;
+}
+
+/* ドラクエ風ボタン */
+.dq-button {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'DotGothic16', sans-serif;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.2s ease;
+}
+
+.dq-button:hover {
+    background-color: #333;
+    box-shadow: 0 0 10px #fff;
+}
+
+
+.game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.characters {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.character {
+    text-align: center;
+}
+
+.char-img {
+    width: 150px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.hp {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.battle-area {
+    margin-top: 20px;
+	text-align: center;
+}
+
+.word {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 18px;
+    width: 200px;
+}
+
+
+
+.log {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+/*点滅アニメーション*/
+@keyframes blink-red {
+    0% { filter: none; }
+    50% { filter: brightness(1.5) sepia(1) hue-rotate(-30deg); }
+    100% { filter: none; }
+}
+
+/* 揺れエフェクト（左右にぶれる） */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-8px); }
+    80% { transform: translateX(8px); }
+    100% { transform: translateX(0); }
+}
+
+/* 複合エフェクト：同時に点滅＆揺れ */
+.damage-effect {
+    animation: blink-red 0.4s ease-in-out, shake 0.4s ease-in-out;
+}
