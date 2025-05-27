@@ -10,6 +10,7 @@ B型作業所の利用者様にむけて制作　
 # Requirement
 * Eclipce2025
 * miroにてフローチャート図作成
+* Excelにて要件定義書の作成
 
 # Usage
 ```bash
