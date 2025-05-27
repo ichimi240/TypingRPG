@@ -15,6 +15,8 @@ B型作業所の利用者様にむけて制作　
 git clone https://github.com/ichimi240/TypingRPG.git
 cd webapp/login.jspをサーバーで実行
 ```
+# Note
+パスワードは「1234」になっています
 
 # Author
 * 作成者　西尾　一美
