@@ -9,6 +9,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    position: relative;       /* ← 背景画像の絶対位置の基準に */
+    overflow: hidden;         /* ← 背景がはみ出しても非表示に */
 }
 
 .center-box {
@@ -30,6 +32,9 @@ body {
     width: 500px;
     box-shadow: 0 0 15px #ffffffcc;
     text-align: left;
+	position: relative; /* ← 背景画像の上に表示するために必要 */
+	z-index: 1;         /* ← 背景よりも前面に出す */
+	margin-top: 200px;
 }
 
 /* タイトル */
@@ -62,11 +67,38 @@ body {
     transition: all 0.2s ease;
 }
 
+/* フェードイン背景画像 */
+.bg-slide-image {
+  position: absolute;
+  top: -120px;
+  left: 0; /* ← スライドなし */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-out;
+  z-index: 0; /* 背面に配置 */
+}
+.bg-slide-image.show {
+  opacity: 1;
+}
+
+/*Game Over画像*/
+.bg-gameover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.10;  /*少し透けさせる*/ 
+    z-index: 0;
+}
+
 .dq-button:hover {
     background-color: #333;
     box-shadow: 0 0 10px #fff;
 }
-
 
 .game-container {
     max-width: 800px;

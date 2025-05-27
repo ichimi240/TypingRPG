@@ -10,9 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 </head>
 <body>
+	<!-- 背景画像 -->
+	<img src="<%= request.getContextPath() %>/images/gameover.png" alt="Game Over" class="bg-gameover">
 	<div class="log dq-log">
 		<div class="dq-window">
-		    <h1>💀 敗北...</h1>
+		    <h1>
+		    	<img src="<%= request.getContextPath() %>/images/coffin.png" alt="棺" style="width: 40px; vertical-align: middle;">
+     			敗北...
+		    </h1>
 		    <p>残念！あなたは力尽きました。</p>
 		    <p><%= session.getAttribute("log") %></p>
 		    <form action="GameServlet" method="post">

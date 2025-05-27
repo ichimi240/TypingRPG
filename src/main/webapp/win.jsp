@@ -12,7 +12,9 @@
 <body>
 	<div class="log dq-log">
 		<div class="dq-window">
-		    <h1>🎉 勝利！</h1>
+		    <h1>
+		    	<img src="<%= request.getContextPath() %>/images/treasure_chest.png" alt="宝箱" style="width: 40px; vertical-align: middle;">
+		    	勝利！</h1>
 		    <p>敵をすべて倒しました！</p>
 		    <p><%= session.getAttribute("log") %></p>
 		    <form action="GameServlet" method="post">

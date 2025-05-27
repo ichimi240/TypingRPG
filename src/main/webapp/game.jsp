@@ -31,9 +31,29 @@
 	            <p class="word">お題：『<strong><%= word %></strong>』をタイプ！</p>
 	            <form action="GameServlet" method="post">
 	                <input type="hidden" name="action" value="continue">
-	                <input type="text" name="typedWord" autofocus autocomplete="off"><br><br>
+	                <input type="text" name="typedWord" id="typedWord" autofocus autocomplete="off"><br><br>
 	                <input type="submit" value="▶ 入力する" class="dq-button">
 	            </form>
+	            
+	            <p>残り時間: <span id="timer">20</span>秒</p>
+	            <script>
+	            	let timeLeft = 20; // 秒数
+		            const timerElem = document.getElementById('timer');
+		            const inputBox = document.getElementById('typedWord');
+		            const form = inputBox.form;
+		            
+		            const countdown = setInterval(() => {
+		            	timeLeft--;
+		            	timerElem.textContent = timeLeft;
+		                if (timeLeft <= 0) {
+		                	clearInterval(countdown);
+		                    alert('時間切れ！');
+		                    inputBox.disabled = true;
+		                    form.submit(); // 時間切れで自動送信（必要なら）
+		                }
+					}, 1000);
+				</script>
+	            
 	        </div>
 		</div>
 		<p>ログイン中：<%= session.getAttribute("username") %> さん</p><br>

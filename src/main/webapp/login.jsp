@@ -9,6 +9,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 </head>
 <body>
+	<!-- 背景画像 -->
+	<img src="images/rogo.png" alt="背景" class="bg-slide-image" id="bgImage">
+	
+	<!-- ログインフォーム -->
 	<div class="dq-window">
 	    <h2 class="dq-title">ログイン</h2>
 	    <form method="post" action="LoginServlet">
@@ -21,5 +25,12 @@
 	        <p style="color:red;">パスワードが間違っています</p>
 	    <% } %>
 	</div>
+	
+	<!-- スライドアニメーション -->
+	<script>
+		window.onload = function() {
+			document.getElementById('bgImage').classList.add('show');
+		};
+	</script>
 </body>
 </html>
