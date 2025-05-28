@@ -11,11 +11,13 @@ B型作業所の利用者様にむけて制作しました。ネットで情報�
 * miroにてフローチャート図作成
 * Excelにて要件定義書の作成
 
-# Usage
+# Installation
 ```bash
 git clone https://github.com/ichimi240/TypingRPG.git
 cd webapp/login.jspをサーバーで実行
 ```
+# Gameplay Screen
+
 # Note
 パスワードは「1234」になっています
 
