@@ -24,5 +24,3 @@ cd webapp/login.jspをサーバーで実行
 # License
 このアプリは個人の学習目的で作成されたものであり、商用利用を禁止しています。
 その他の利用条件については、[ライセンス](https://quux/◆◆◆◆◆◆◆/MIT_License)ファイルをご確認ください。
-
-# Installation
