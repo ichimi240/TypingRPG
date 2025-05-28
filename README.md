@@ -23,7 +23,4 @@ cd webapp/login.jspをサーバーで実行
 * 作成者　西尾　一美
 # License
 このアプリは個人の学習目的で作成されたものであり、商用利用を禁止しています。
-その他の利用条件については、ライセンスファイルをご確認ください。
-
-"quux" is under [MIT license](https://quux/◆◆◆◆◆◆◆/MIT_License).
-"quux" is Confidential.
+その他の利用条件については、[ライセンスファイル](https://quux/◆◆◆◆◆◆◆/MIT_License).をご確認ください。
