@@ -9,11 +9,11 @@
     <!-- ドット風フォント -->
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="game_win">
 	<div class="log dq-log">
 		<div class="dq-window">
 		    <h1>
-		    	<img src="<%= request.getContextPath() %>/images/treasure_chest.png" alt="宝箱" style="width: 40px; vertical-align: middle;">
+		    	<img src="<%= request.getContextPath() %>/images/treasure_chest.png" alt="宝箱" style="width: 60px; vertical-align: middle;">
 		    	勝利！</h1>
 		    <p>敵をすべて倒しました！</p>
 		    <p><%= session.getAttribute("log") %></p>
@@ -22,9 +22,9 @@
 		        <button type="submit" class="dq-button">▶ もう一度プレイ</button>
 		    </form>
 		</div>
-		<p>ログイン中：<%= session.getAttribute("username") %> さん</p><br>
+		<p class="console-log">ログイン中：<%= session.getAttribute("username") %> さん</p>
 		<div style="text-align:right;">
-			<a href="LogoutServlet">ログアウト</a>
+			<p class="console-log"><a href="LogoutServlet">ログアウト</a></p>
 		</div>		    
 	</div>		    
 </body>

@@ -9,13 +9,11 @@
     <!-- ドット風フォント -->
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 </head>
-<body>
-	<!-- 背景画像 -->
-	<img src="<%= request.getContextPath() %>/images/gameover.png" alt="Game Over" class="bg-gameover">
+<body class="game_lose">
 	<div class="log dq-log">
 		<div class="dq-window">
 		    <h1>
-		    	<img src="<%= request.getContextPath() %>/images/coffin.png" alt="棺" style="width: 40px; vertical-align: middle;">
+		    	<img src="<%= request.getContextPath() %>/images/coffin.png" alt="棺" style="width: 50px; vertical-align: middle;">
      			敗北...
 		    </h1>
 		    <p>残念！あなたは力尽きました。</p>
@@ -25,9 +23,9 @@
 		        <button type="submit" class="dq-button">▶ リトライ</button>
 		    </form>
 		</div>
-		<p>ログイン中：<%= session.getAttribute("username") %> さん</p><br>
+		<p class="console-log">ログイン中：<%= session.getAttribute("username") %> さん</p>
 		<div style="text-align:right;">
-			<a href="LogoutServlet">ログアウト</a>
+			<p class="console-log"><a href="LogoutServlet">ログアウト</a></p>
 		</div>
 	</div>
 </body>

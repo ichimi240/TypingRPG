@@ -12,15 +12,27 @@ body {
     position: relative;       /* ← 背景画像の絶対位置の基準に */
     overflow: hidden;         /* ← 背景がはみ出しても非表示に */
 }
-
-.center-box {
-    max-width: 400px;
-    margin: 100px auto; /* 上下中央に近く */
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    text-align: center;
+/*背景が画像の場合*/
+body.game_events {
+    background-color: #0078f0;
+    background-image: url("images/game_events.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body.game_win {
+    background-color: #0078f0;
+    background-image: url("images/youwin.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body.game_lose {
+    background-color: #0078f0;
+    background-image: url("images/gameover.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* ウィンドウ（セリフ枠）風 */
@@ -34,7 +46,8 @@ body {
     text-align: left;
 	position: relative; /* ← 背景画像の上に表示するために必要 */
 	z-index: 1;         /* ← 背景よりも前面に出す */
-	margin-top: 200px;
+	margin-top: 100px;
+	font-size: 20px;
 }
 
 /* タイトル */
@@ -83,18 +96,6 @@ body {
   opacity: 1;
 }
 
-/*Game Over画像*/
-.bg-gameover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.10;  /*少し透けさせる*/ 
-    z-index: 0;
-}
-
 .dq-button:hover {
     background-color: #333;
     box-shadow: 0 0 10px #fff;
@@ -128,6 +129,7 @@ body {
 .hp {
     font-weight: bold;
     color: #e74c3c;
+	font-size: 20px;
 }
 
 .battle-area {
@@ -147,12 +149,19 @@ input[type="text"] {
 }
 
 
-
-.log {
+.console-log {
     margin-top: 15px;
     font-size: 20px;
-    font-size: 16px;
-    color: #333;
+    color: #000;
+	text-shadow:
+	    1px 1px 0 #fff,
+	   -1px 1px 0 #fff,
+	    1px -1px 0 #fff,
+	   -1px -1px 0 #fff,
+	    0 1px 0 #fff,
+	    0 -1px 0 #fff,
+	    1px 0 0 #fff,
+	   -1px 0 0 #fff;
 }
 
 /*点滅アニメーション*/

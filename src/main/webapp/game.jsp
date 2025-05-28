@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 </head>
-<body>
-	<div class="log dq-log"><%= log %><br><br>
-	    <div class="dq-window">
+<body class="game_events">	
+	<div class="log dq-log"><p class="console-log"><%= log %></p>
+	    <div class="dq-window">	
 	        <div class="characters">
 	            <div class="character">
 	                <img src="images/player.png" alt="プレイヤー" class="char-img">
@@ -56,9 +56,9 @@
 	            
 	        </div>
 		</div>
-		<p>ログイン中：<%= session.getAttribute("username") %> さん</p><br>
+		<p class="console-log">ログイン中：<%= session.getAttribute("username") %> さん</p>
 		<div style="text-align:right;">
-    		<a href="LogoutServlet">ログアウト</a>      
+    		<p class="console-log"><a href="LogoutServlet">ログアウト</a></p>      
     	</div>
     </div>
     
