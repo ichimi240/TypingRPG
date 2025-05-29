@@ -14,8 +14,10 @@
 # Installation
 ```bash
 git clone https://github.com/ichimi240/TypingRPG.git
-cd webapp/login.jspをサーバーで実行
 ```
+
+clone→TypingRPGファイルをEclipce2025でインポート→webapp/login.jspをサーバーで実行
+
 # Gameplay Screen
 ログイン画面でユーザー名とパスワードを入力する→ユーザー名が入っていなかったりパスワードが違う場合は注意喚起がある
 
