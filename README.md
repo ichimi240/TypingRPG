@@ -22,7 +22,8 @@ cd webapp/login.jspをサーバーで実行
 ログイン成功でスタート画面に移行する
 ![スタート画面](https://github.com/user-attachments/assets/c520779a-a304-4432-8b03-9e455d0c7199)
 ゲーム画面でタイピングを行う
-![ゲーム画面](https://github.com/user-attachments/assets/e36c38fd-ee1c-4929-984a-787754d78bd3)
+![ゲーム画面](https://github.com/user-attachments/assets/e36c38fd-ee1c-4929-984a-787754d78bd3)  
+
 時間内でできなければ時間切れのテロップがでる
 ![時間オーバー](https://github.com/user-attachments/assets/dad43ba8-72b9-4ed4-9586-8c120e4c536e)
 勝てば勝利画面に移行
