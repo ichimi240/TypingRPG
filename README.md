@@ -7,7 +7,7 @@
 就労支援者様に向けたタイピング練習ゲーム
 
 # Requirement
-* Eclipce2025
+* Eclipce2025　tomcat10_Java21 の環境
 * miroにてフローチャート図作成
 * Excelにて要件定義書の作成
 
